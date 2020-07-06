@@ -1,0 +1,151 @@
+@import "vars";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+<<<<<<< Updated upstream
+  outline: none;
+=======
+  //height: 100%;
+>>>>>>> Stashed changes
+}
+
+html, body {height: 100%}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  //font-size: 30px;
+}
+
+
+
+.wrapper{
+  width: 100%;
+  @include gradient(45deg, #b08a90, #b9d8e4);
+  min-height: 100%;
+  padding-top: 50px;
+  //padding-bottom: 50px;
+  max-height: 100%;
+}
+
+/* скрываем //чекбоксы// и блоки с содержанием */
+//.hide,
+.hide + label ~ div {
+    display: none;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+}
+
+.mainblock{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 50px 0;
+
+  h1{
+    font-family: 'Lora', serif;
+    text-align: left;
+    color: #454545;
+    padding: 0 50px;
+  }
+
+div.buttons{
+
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 40%;
+  font-size: 20px;
+  height: 40px;
+  //width: 150px;
+  transition: all 1s ease;
+&.okay{
+  &:hover{
+    @include buttons-cover(#303030, #fff);
+  }
+}
+}
+}
+
+
+.okay{
+  width: 100px;
+  font-size: 20px;
+}
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+/* скрываем //чекбоксы// и блоки с содержанием */
+//.hide,
+.hide + label ~ div {
+    display: none;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+}

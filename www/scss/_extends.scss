@@ -1,0 +1,13 @@
+%p{
+  background: white;
+  font-weight: normal;
+}
+
+%btn{
+  border-radius: 10px;
+  border-width:thin;
+  font-size: 24px;
+  &:hover{
+    background: silver;
+  }
+}

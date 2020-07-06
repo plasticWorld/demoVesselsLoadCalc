@@ -1,0 +1,17 @@
+@mixin font($size, $color){
+  font-size: $size;
+  color: $color;
+  font-family: 'Times',sans-serif;
+  background-color: pink;
+}
+
+@mixin gradient($direction, $fromColor, $toColor){
+  background: $fromColor;
+  background: linear-gradient($direction, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}', GradientType=1 );
+}
+
+@mixin buttons-cover($bgColor, $txtColor){
+  background: $bgColor;
+  color: $txtColor;
+}
