@@ -27,9 +27,13 @@
   <div class="mainblock">
       <h1>Расчет нагрузки от навала судов при подходе к сооружению</h1>
       <div class = "calculator_content">
-        <p class='additional_information'>Расчет производится в соответствии с
-          СП 38.13330.2018</p>
-        <div class="calculator_row_group_name">Название группы исходных данных</div>
+        <p class='additional_information'>
+          Расчет производится в соответствии с
+          СП 38.13330.2018
+        </p>
+        <div class="calculator_row_group_name">
+          Название группы исходных данных
+        </div>
 
         <div>
           <input class="hide" type="checkbox" id="hd-1">
@@ -52,9 +56,27 @@
               </div>
           </div>
 
+    <div class="calculator_row">
+      <div></div>
+
+    </div>
+
           <label for="cordon-mark">Отметка дна:</label>
           <input type="number" id="cordon-mark" name="cordon-mark" min="0" max="100" step="0.1" value="30">
           <br>
+
+          <label for="cordon-mark">Расчетное водоизмещение судна:</label>
+          <input type="number"  min="0" max="100" step="0.1" value="30">
+          <br>
+
+          <label for="cordon-mark">Осадка судна:</label>
+          <input type="number"  min="0" max="100" step="0.1" value="30">
+          <br>
+
+          <label for="cordon-mark">Глубина воды:</label>
+          <input type="number"  min="0" max="100" step="0.1" value="30">
+          <br>
+
           <label for="cordon-mark">First name:</label>  <input type="text" name="ﬁrst-name"  value="John" placeholder="Please  enter your ﬁrst name here"><br>
 
           <input type="radio" id="male" name="gender" value="male">
@@ -62,8 +84,12 @@
           <br><br>
         </div>
         <div class="buttons">
-          <button class = "confirm-btn">Расчитать</button>
-          <button class = "download-btn">Скачать Документ</button>
+          <button class = "confirm-btn">
+            <i class="fa fa-calculator" aria-hidden="true"></i>
+            Расчитать</button>
+          <button class = "download-btn">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Скачать Документ</button>
         </div>
 
   </div>
@@ -86,6 +112,22 @@
 "calculator_row_input">
 "calculator_row_input-field"
 "calculator_row_unit" -->
+
+
+<footer>
+  <div class = "up-to-top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </div>
+  <p>Все права защищены &copy2020</p>
+  <div class = "social">
+    <div>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <div>
+      <i class="fab fa-telegram-plane"></i>
+    </div>
+  </div>
+</footer>
 
 <script async src="js/index.js"></script>
 </body>

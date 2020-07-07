@@ -49,19 +49,19 @@ header > .nav a {
   font-weight: bold;
 }
 
-header > .nav a:hover{color: #60958f}
+header > .nav a:hover{color: lighten($main-color, 15%)}
 
 header > .menu {
   cursor: pointer;
   font-size: 20px;
-  color: #60958f;
+  color: lighten($main-color, 15%);//#60958f;
 }
 
 header > .menu:hover{color:#505050}
 
 .wrapper{
   width: 100%;
-  @include gradient(45deg, #2d5f63, #b9d8e4);
+  @include gradient(45deg, $main-color, #b9d8e4);
 
   padding-top: 50px;
   min-height: 100%;
@@ -83,9 +83,10 @@ header > .menu:hover{color:#505050}
   width: 800px;
   margin: 0 auto;
   text-align: center;
-  background: #e2e2e2;
+  background: $color-for-btn-and-block;
   border-radius: 5px;
   padding: 2% 0;
+  //height: 85vh;
 
   h1{
     font-family: 'Lora', serif;
@@ -96,7 +97,6 @@ header > .menu:hover{color:#505050}
 
   .buttons{
     display: flex;
-
     justify-content: space-between;
     width: 60%;
     margin-left: 20%;
@@ -105,18 +105,18 @@ header > .menu:hover{color:#505050}
 
   button {
     display: inline-block;
-    border-radius: 3px;
-    border: 1px solid #285a74;
+    border-radius: 2px;
+    border: 1px solid #fff;
     font-size: 18px;
     height: 50px;
     width: 45%;
     transition: all 1s ease;
     cursor: pointer;
-    background: #2d5f63;
-    color: #e2e2e2;
+    background: darken($main-color, 5%);
+    color: $color-for-btn-and-block;
     &.confirm-btn{
       &:hover{
-        @include buttons-cover(#2aa14e, #fff);
+        @include buttons-cover(#399354, #fff);
       }
     }
     &.download-btn{
@@ -125,6 +125,42 @@ header > .menu:hover{color:#505050}
       }
     }
   }
+}
+
+footer {
+  width: 90%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darken($main-color, 5%);
+
+  .social div {
+    display: inline-block;
+    margin-left: 15px;
+    font-size:24px;
+    &:hover {transform: scale(1.1)}
+  }
+
+  p {
+    color: #f9f9f9;
+    font-size: 14px;
+  }
+
+  .up-to-top,
+  .social div {
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     line-height: 50px;
+     background: #f9f9f9;
+     border-radius: 1px;
+     //border: 1px solid lighten($main-color, 20%)//#60958f;
+     cursor: pointer;
+     color: darken($main-color, 5%);
+     transition: transform 300ms ease;
+  }
+  .up-to-top:hover{transform: translateY(-10%)}
 }
 
 .calculator_content {
