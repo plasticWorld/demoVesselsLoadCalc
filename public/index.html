@@ -21,88 +21,192 @@
     </span>
   </header>
 
+  <div id = "hidden-menu">
+    <span class="close">
+      <i class="fas fa-times"></i>
+    </span>
+    <h3>Меню</h3>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Расчеты</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </div>
+
 
 
 <div class="wrapper">
   <div class="mainblock">
-      <h1>Расчет нагрузки от навала судов при подходе к сооружению</h1>
-      <div class = "calculator_content">
-        <p class='additional_information'>
-          Расчет производится в соответствии с
-          СП 38.13330.2018
-        </p>
-        <div class="calculator_row_group_name">
-          Название группы исходных данных
-        </div>
+    <h2>Расчет нагрузки от навала судов при подходе к сооружению</h2>
+    <div class = "calculator_content">
+      <p class='additional_information'>
+        Расчет производится в соответствии с СП 38.13330.2018
+      </p>
+      <br>
+      <div class="calculator_row_group_name">
+        Название группы исходных данных
+      </div>
 
-        <div>
-          <input class="hide" type="checkbox" id="hd-1">
-            <label for="hd-1">Расчитать отметку кордона</label>
-            <div>
-              поля, подписи для расчета отметки
-            </div>
-        </div>
+      <br>
 
-          <div class="calculator_row_input">
-            <div class="calculator_row_name">Отметка кордона</div>
-            <input autocomplete="off" aria-label="Отметка кордона" class="calculator_row_input-field" placeholder="" type="text" value="">
-          </div>
-
+      <div>
+        <input class="hide" type="checkbox" id="hd-1">
+          <label for="hd-1">Расчитать отметку кордона</label>
           <div>
-            <input class="hide" type="checkbox" id="hd-2">
-              <label for="hd-2">Расчитать отметку дна</label>
-              <div>
-                  поля, подписи для расчета отметки дна
-              </div>
+            поля, подписи для расчета отметки
           </div>
+      </div>
 
-    <div class="calculator_row">
-      <div></div>
+      <div class = "calculator-row-group">
+        <div class = "calculator-row-name">
+          <label for="cordon-mark">Отметка кордона:</label>
+        </div>
+        <div class = "calculator-row-input-field">
+          <input type="text" name="cordon-mark"  value="Отметка кордона" placeholder="Введите отметку дна">
+        </div>
+        <div class = "calculator-row-unit">
+          <select class = "units" name="cordon-mark-units">
+            <option value="meters">м</option>
+            <option value="mm-meters">мм</option>
+          </select>
+        </div>
+        <div class="help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+        <input class="hide" type="checkbox" id="hd-2">
+          <label for="hd-2">Расчитать отметку дна</label>
+          <div>
+              поля, подписи для расчета отметки дна
+          </div>
+      </div>
+
+      <div class = "calculator-row-group">
+        <div class = "calculator-row-name">
+          <label for="depth-mark">Отметка дна:</label>
+        </div>
+        <div class = "calculator-row-input-field">
+          <input type="text" name="depth-mark"  value="Отметка дна" placeholder="Введите отметку дна">
+        </div>
+        <div class = "calculator-row-unit">
+          <select class = "units" name="depth-mark-units">
+            <option value="meters">м</option>
+            <option value="mm-meters">мм</option>
+          </select>
+        </div>
+        <div class="help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <br>
+
+      <div class = "calculator-row-group">
+        <div class = "calculator-row-name">
+          <label for="water-mark">Отметка воды:</label>
+        </div>
+        <div class = "calculator-row-input-field">
+          <input type="text" name="water-mark"  value="Отметка воды" placeholder="Введите отметку дна">
+        </div>
+        <div class = "calculator-row-unit">
+          <select class = "units" name="water-mark-units">
+            <option value="meters">м</option>
+            <option value="mm-meters">мм</option>
+          </select>
+        </div>
+        <div class="help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <br>
+
+      <div class = "calculator-row-group">
+        <div class = "calculator-row-name">
+          <label for="vessel-volume">Расчетное водоизмещение судна:</label>
+        </div>
+        <div class = "calculator-row-input-field">
+          <input type="number"  min="0" max="100" step="0.1" value="30">
+        </div>
+        <div class = "calculator-row-unit">
+          <select class = "units" name="vessel-volume-units">
+            <option value="tonn">т</option>
+            <option value="sq-meters">м^3</option>
+          </select>
+        </div>
+        <div class="help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <br>
+
+      <div class = "calculator-row-group">
+        <div class = "calculator-row-name">
+          <label for="vessel-draught">Осадка судна:</label>
+        </div>
+        <div class = "calculator-row-input-field">
+          <input type="number"  min="0" max="100" step="0.1" value="30">
+        </div>
+        <div class = "calculator-row-unit">
+          <select class = "units" name="vessel-draught-units">
+            <option value="meters">м</option>
+            <option value="sm-meters">см</option>
+            <option value="mm-meters">мм</option>
+          </select>
+        </div>
+        <div class="help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <br>
+
+      <div class = "radio-btn-row">
+        <div class = "radio-btn-block">
+          <label for="water-area">Выберите тип акватории:</label>
+          <br>
+          <input type="radio" id="open" name="water-area" value="open">
+          <label for="open">Открытая</label>
+          <br>
+          <input type="radio" id="close" name="water-area" value="close">
+          <label for="close">Закрытая</label>
+        </div>
+
+        <div class = "radio-btn-block">
+          <label for="mooring-condition">Выберите условия швартовки:</label>
+          <br>
+          <input type="radio" id="easy" name="mooring-condition" value="easy">
+          <label for="easy">Простые</label>
+          <br>
+          <input type="radio" id="moderate" name="mooring-condition" value="moderate">
+          <label for="moderate">Средние</label>
+          <br>
+          <input type="radio" id="hard" name="mooring-condition" value="hard">
+          <label for="hard">Сложные</label>
+        </div>
+      </div>
+
+      <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
 
     </div>
 
-          <label for="cordon-mark">Отметка дна:</label>
-          <input type="number" id="cordon-mark" name="cordon-mark" min="0" max="100" step="0.1" value="30">
-          <br>
-
-          <label for="cordon-mark">Расчетное водоизмещение судна:</label>
-          <input type="number"  min="0" max="100" step="0.1" value="30">
-          <br>
-
-          <label for="cordon-mark">Осадка судна:</label>
-          <input type="number"  min="0" max="100" step="0.1" value="30">
-          <br>
-
-          <label for="cordon-mark">Глубина воды:</label>
-          <input type="number"  min="0" max="100" step="0.1" value="30">
-          <br>
-
-          <label for="cordon-mark">First name:</label>  <input type="text" name="ﬁrst-name"  value="John" placeholder="Please  enter your ﬁrst name here"><br>
-
-          <input type="radio" id="male" name="gender" value="male">
-          <label for="male">Male</label><br>
-          <br><br>
-        </div>
-        <div class="buttons">
-          <button class = "confirm-btn">
-            <i class="fa fa-calculator" aria-hidden="true"></i>
-            Расчитать</button>
-          <button class = "download-btn">
-            <i class="fa fa-download" aria-hidden="true"></i>
-            Скачать Документ</button>
-        </div>
+    <div class="buttons">
+      <button class = "confirm-btn">
+        <i class="fa fa-calculator" aria-hidden="true"></i>
+        Расчитать</button>
+      <button class = "download-btn">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        Скачать Документ</button>
+    </div>
 
   </div>
 </div>
-<!-- <div class="calculator_content">
-<div class ="calculator_form">
-<div class="calculator_column">
-<div class="calculator_loader">
-<div class="calculator_row_group">
-<div class="calculator_row">
-
-<div class="calculator_row_unit"> </div>
-
+<!--
 "calculator_content"
 "calculator_form"
 "calculator_column"
@@ -126,9 +230,21 @@
     <div>
       <i class="fab fa-telegram-plane"></i>
     </div>
+    <div>
+      <i class="fab fa-telegram-plane"></i>
+    </div>
+    <div>
+      <i class="fab fa-telegram-plane"></i>
+    </div>
+    <div>
+      <i class="fab fa-telegram-plane"></i>
+    </div>
   </div>
 </footer>
 
-<script async src="js/index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
 </body>
 </html>

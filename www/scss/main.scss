@@ -59,14 +59,61 @@ header > .menu {
 
 header > .menu:hover{color:#505050}
 
+#hidden-menu {
+  width: 300px;
+  position: fixed;
+  top: 10px;
+  right: -300px;
+  height: 100vh;
+  z-index: 10;
+  background: #fff;
+  text-align: center;
+
+  h3 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+      a {
+        color: #333;
+        &:hover {color: #aaa}
+      }
+    }
+  }
+
+  & .close{
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 600ms ease;
+
+    &:hover{color: #652f2f}
+  }
+}
+
+
+
 .wrapper{
   width: 100%;
   @include gradient(45deg, $main-color, #b9d8e4);
 
   padding-top: 50px;
+  padding-bottom: 50px;
   min-height: 100%;
   min-width: 800px;
 }
+
+
+
+
+
 
 /* скрываем //чекбоксы// и блоки с содержанием */
 //.hide,
@@ -80,15 +127,15 @@ header > .menu:hover{color:#505050}
 }
 
 .mainblock{
-  width: 800px;
+  width: 600px;
   margin: 0 auto;
   text-align: center;
   background: $color-for-btn-and-block;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 2% 0;
   //height: 85vh;
 
-  h1{
+  h2{
     font-family: 'Lora', serif;
     text-align: left;
     color: #454545;
@@ -98,8 +145,8 @@ header > .menu:hover{color:#505050}
   .buttons{
     display: flex;
     justify-content: space-between;
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
     margin-top: 50px;
   }
 
@@ -114,15 +161,11 @@ header > .menu:hover{color:#505050}
     cursor: pointer;
     background: darken($main-color, 5%);
     color: $color-for-btn-and-block;
-    &.confirm-btn{
-      &:hover{
-        @include buttons-cover(#399354, #fff);
-      }
+    &.confirm-btn:hover{
+      @include buttons-cover(#399354, #fff);
     }
-    &.download-btn{
-      &:hover{
-        @include buttons-cover(#303030, #fff);
-      }
+    &.download-btn:hover{
+      @include buttons-cover(#303030, #fff);
     }
   }
 }
@@ -138,7 +181,6 @@ footer {
   .social div {
     display: inline-block;
     margin-left: 15px;
-    font-size:24px;
     &:hover {transform: scale(1.1)}
   }
 
@@ -149,6 +191,8 @@ footer {
 
   .up-to-top,
   .social div {
+
+    font-size:24px;
      width: 50px;
      height: 50px;
      text-align: center;
