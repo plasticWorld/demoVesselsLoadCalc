@@ -107,7 +107,7 @@ header > .menu:hover{color:#505050}
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 100%;
-  min-width: 800px;
+  min-width: 50%;
 }
 
 
@@ -125,9 +125,9 @@ header > .menu:hover{color:#505050}
 .hide:checked + label + div {
     display: block;
 }
-
+//color: #007cb2
 .mainblock{
-  width: 600px;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
   background: $color-for-btn-and-block;
@@ -169,6 +169,11 @@ header > .menu:hover{color:#505050}
     }
   }
 }
+
+.calculator_content, input {
+  font-size: 15px;
+}
+
 
 footer {
   width: 90%;
@@ -241,34 +246,34 @@ footer {
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
+// .popup .popuptext::after {
+//     content: "";
+//     position: absolute;
+//     top: 100%;
+//     left: 50%;
+//     margin-left: -5px;
+//     border-width: 5px;
+//     border-style: solid;
+//     border-color: #555 transparent transparent transparent;
+// }
 
 /* Toggle this class - hide and show the popup */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
+// .popup .show {
+//     visibility: visible;
+//     -webkit-animation: fadeIn 1s;
+//     animation: fadeIn 1s;
+// }
+//
+// /* Add animation (fade in the popup) */
+// @-webkit-keyframes fadeIn {
+//     from {opacity: 0;}
+//     to {opacity: 1;}
+// }
+//
+// @keyframes fadeIn {
+//     from {opacity: 0;}
+//     to {opacity:1 ;}
+// }
 
 
 /* скрываем //чекбоксы// и блоки с содержанием */
@@ -280,4 +285,87 @@ footer {
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
     display: block;
+}
+
+
+
+
+.calculator-row-group {
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //align-self: stretch;
+
+   label,
+   input,
+   select {
+     border: none;
+     line-height: inherit;
+     background-color: #ebebeb;
+     border: 1px solid #797a7c;
+
+   }
+}
+
+
+
+
+.calculator-row-unit {
+  //position: absolute;
+  //right: 20px;
+  //width: 50px;
+
+  overflow: hidden;
+
+  & .units {
+    //width: 50px;
+    //height: inherit;
+    flex: 0 5%;
+    color: #007cb2;
+    text-decoration:underline;
+    cursor: pointer;
+    border: none;
+  	//width: 150px;
+
+  	background: transparent;
+  	border: none;
+    &::after {
+      content: " ▾";
+    }
+  }
+}
+
+
+.calculator-row-name {
+  background: #5036a4;
+  flex: 1 content;
+  min-width: 20%;
+  left: 0;
+  text-align: left;
+}
+
+.input-hint {
+  flex: 1 5%;
+  background: #fa0;
+  max-width: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.calculator-row-input-field {
+  background: #1fb6b6;
+
+  //position: absolute;
+  //right: 70px;
+  flex: 4 60%;
+  &::after{content: '*'}
+}
+
+#doit {
+  border: none;
+  line-height: inherit;
+  background-color: #ebebeb;
+  border: 1px solid #797a7c;
 }

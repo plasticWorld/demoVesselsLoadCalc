@@ -59,7 +59,7 @@
 
       <div class = "calculator-row-group">
         <div class = "calculator-row-name">
-          <label for="cordon-mark">Отметка кордона:</label>
+          <label for="cordon-mark">Отметка кордона</label>
         </div>
         <div class = "calculator-row-input-field">
           <input type="text" name="cordon-mark"  value="Отметка кордона" placeholder="Введите отметку дна">
@@ -70,7 +70,7 @@
             <option value="mm-meters">мм</option>
           </select>
         </div>
-        <div class="help">
+        <div class="input-hint">
           <i class="fa fa-question-circle" aria-hidden="true"></i>
         </div>
       </div>
@@ -87,7 +87,7 @@
 
       <div class = "calculator-row-group">
         <div class = "calculator-row-name">
-          <label for="depth-mark">Отметка дна:</label>
+          <label for="depth-mark">Отметка дна</label>
         </div>
         <div class = "calculator-row-input-field">
           <input type="text" name="depth-mark"  value="Отметка дна" placeholder="Введите отметку дна">
@@ -98,19 +98,20 @@
             <option value="mm-meters">мм</option>
           </select>
         </div>
-        <div class="help">
+        <div class="input-hint">
           <i class="fa fa-question-circle" aria-hidden="true"></i>
         </div>
       </div>
 
       <br>
 
+<div class="calculator-group">
       <div class = "calculator-row-group">
         <div class = "calculator-row-name">
-          <label for="water-mark">Отметка воды:</label>
+          <label for="water-mark">Отметка воды</label>
         </div>
         <div class = "calculator-row-input-field">
-          <input type="text" name="water-mark"  value="Отметка воды" placeholder="Введите отметку дна">
+          <input type="number"  min="" max="" step="0.01" value="">
         </div>
         <div class = "calculator-row-unit">
           <select class = "units" name="water-mark-units">
@@ -118,57 +119,128 @@
             <option value="mm-meters">мм</option>
           </select>
         </div>
-        <div class="help">
+        <div class="input-hint">
           <i class="fa fa-question-circle" aria-hidden="true"></i>
         </div>
       </div>
+</div>
+      <br>  <br>
 
-      <br>
+<div class="calculator-group">
 
-      <div class = "calculator-row-group">
-        <div class = "calculator-row-name">
-          <label for="vessel-volume">Расчетное водоизмещение судна:</label>
-        </div>
-        <div class = "calculator-row-input-field">
-          <input type="number"  min="0" max="100" step="0.1" value="30">
-        </div>
-        <div class = "calculator-row-unit">
-          <select class = "units" name="vessel-volume-units">
-            <option value="tonn">т</option>
-            <option value="sq-meters">м^3</option>
-          </select>
-        </div>
-        <div class="help">
-          <i class="fa fa-question-circle" aria-hidden="true"></i>
-        </div>
-      </div>
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-volume">Водоизмещение судна</label>
+    </div>
+    <div class = "calculator-row-input-field">
+      <input type="number"  min="0" max="100" step="0.1" value="30">
+    </div>
+    <div class = "calculator-row-unit">
+      <select class = "units" name="vessel-volume-units">
+        <option value="tonn">т</option>
+        <option value="sq-meters">м^3</option>
+      </select>
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
 
-      <br>
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-length">Длина судна</label>
+    </div>
+    <div class = "calculator-row-input-field">
+      <input type="number"  min="0" max="100" step="0.1" value="30">
+    </div>
+    <div class = "calculator-row-unit">
+      <select class = "units" name="vessel-length-units">
+        <option value="tonn">т</option>
+        <option value="sq-meters">м^3</option>
+      </select>
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
 
-      <div class = "calculator-row-group">
-        <div class = "calculator-row-name">
-          <label for="vessel-draught">Осадка судна:</label>
-        </div>
-        <div class = "calculator-row-input-field">
-          <input type="number"  min="0" max="100" step="0.1" value="30">
-        </div>
-        <div class = "calculator-row-unit">
-          <select class = "units" name="vessel-draught-units">
-            <option value="meters">м</option>
-            <option value="sm-meters">см</option>
-            <option value="mm-meters">мм</option>
-          </select>
-        </div>
-        <div class="help">
-          <i class="fa fa-question-circle" aria-hidden="true"></i>
-        </div>
-      </div>
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-draught">Осадка судна</label>
+    </div>
+    <div class = "calculator-row-input-field">
+      <input type="number"  min="0" max="100" step="0.1" value="30">
+    </div>
+    <div class = "calculator-row-unit">
+      <select class = "units" name="vessel-draught-units">
+        <option value="meters">м</option>
+        <option value="sm-meters">см</option>
+        <option value="mm-meters">мм</option>
+      </select>
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-width">Ширина судна</label>
+    </div>
+    <div class = "calculator-row-input-field">
+      <input type="number"  min="0" max="100" step="0.1" value="30">
+    </div>
+    <div class = "calculator-row-unit">
+      <select class = "units" name="vessel-width-units">
+        <option value="tonn">т</option>
+        <option value="sq-meters">м^3dfhgfdgd</option>
+      </select>
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-height">Высота борта судна</label>
+    </div>
+    <div class = "calculator-row-input-field">
+      <input type="number"  min="0" max="100" step="0.1" value="30">
+    </div>
+    <div class = "calculator-row-unit">
+      <select class = "units" name="vessel-height-units">
+        <option value="tonn">т</option>
+        <option value="sq-meters">м^3</option>
+      </select>
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class = "calculator-row-group">
+    <div class = "calculator-row-name">
+      <label for="vessel-types">Тип судна</label>
+    </div>
+    <div class = "calculator-row-input-field">1
+      <!-- <select class = "units" id=#doit name="vessel-types">
+        <option value="meters">мmm-meters</option>
+        <option value="sm-meters">смmm-meters</option>
+        <option value="mm-meters">ммmm-meters</option>
+      </select> -->
+    </div>
+    <div class="input-hint">
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
 
       <br>
 
       <div class = "radio-btn-row">
         <div class = "radio-btn-block">
-          <label for="water-area">Выберите тип акватории:</label>
+          <label for="water-area">Тип акватории</label>
           <br>
           <input type="radio" id="open" name="water-area" value="open">
           <label for="open">Открытая</label>
@@ -178,7 +250,7 @@
         </div>
 
         <div class = "radio-btn-block">
-          <label for="mooring-condition">Выберите условия швартовки:</label>
+          <label for="mooring-condition">Условия швартовки</label>
           <br>
           <input type="radio" id="easy" name="mooring-condition" value="easy">
           <label for="easy">Простые</label>
@@ -210,12 +282,7 @@
 "calculator_content"
 "calculator_form"
 "calculator_column"
-"calculator_loader"
-"calculator_row_group"
-"calculator_row"
-"calculator_row_input">
-"calculator_row_input-field"
-"calculator_row_unit" -->
+"calculator_loader" -->
 
 
 <footer>
