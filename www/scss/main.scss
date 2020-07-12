@@ -287,16 +287,24 @@ footer {
     display: block;
 }
 
-
-
+.calculator-group {
+  display: flex;
+flex-direction: column;
+  // justify-content: space-between;
+  // align-items: stretch;
+  //align-self: stretch;
+}
 
 .calculator-row-group {
   height: 30px;
   line-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+   display: inline-grid;
+   //align-items: center;
+   //justify-content: center;
   //align-self: stretch;
+  //justify-self: stretch;
+  justify-items: stretch;
 
    label,
    input,
@@ -305,6 +313,7 @@ footer {
      line-height: inherit;
      background-color: #ebebeb;
      border: 1px solid #797a7c;
+     justify-self: stretch;
 
    }
 }
@@ -322,7 +331,7 @@ footer {
   & .units {
     //width: 50px;
     //height: inherit;
-    flex: 0 5%;
+
     color: #007cb2;
     text-decoration:underline;
     cursor: pointer;
@@ -340,14 +349,14 @@ footer {
 
 .calculator-row-name {
   background: #5036a4;
-  flex: 1 content;
+
   min-width: 20%;
   left: 0;
   text-align: left;
 }
 
 .input-hint {
-  flex: 1 5%;
+
   background: #fa0;
   max-width: 30px;
   text-align: center;
@@ -359,7 +368,7 @@ footer {
 
   //position: absolute;
   //right: 70px;
-  flex: 4 60%;
+
   &::after{content: '*'}
 }
 
